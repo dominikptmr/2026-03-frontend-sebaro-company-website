@@ -116,7 +116,7 @@ textarea {
     margin: 0 auto;
 }
 
-/* ===== Shared Sections ===== */
+/* ===== Shared Sektionen ===== */
 .stats-section,
 .values-section,
 .team-section,
@@ -366,69 +366,6 @@ textarea {
     font-weight: 700;
 }
 
-/* ===== Values Section ===== */
-.values-section,
-.team-section,
-.contact-section {
-    padding: 4.5rem 0;
-}
-
-.values-section {
-    background: var(--hero-bg);
-    border-top: 0;
-    color: var(--hero-text);
-}
-
-.values-section .section-title {
-    color: var(--hero-text);
-}
-
-.service-grid,
-.services-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.promise-card,
-.service-box,
-.contact-form {
-    border: 1px solid var(--surface-border);
-    border-radius: 0.5rem;
-    background: var(--surface-bg);
-    color: var(--text-color);
-}
-
-.promise-card,
-.contact-form {
-    padding: 1.5rem;
-}
-
-.service-box {
-    text-align: center;
-}
-
-.promise-card img {
-    max-height: 56px;
-    margin: 0 auto 1.25rem;
-}
-
-.promise-card h3,
-.team-card .name {
-    margin: 0 0 0.5rem;
-}
-
-.promise-card h3 {
-    font-size: 1.05rem;
-}
-
-.promise-card p {
-    margin: 0 0 1.1rem;
-}
-
-.promise-card a,
-.contact-text a {
-    color: var(--link-color);
-}
-
 /* ===== Mission ===== */
 .mission-section {
     padding: 3.5rem 0 4.5rem;
@@ -565,6 +502,69 @@ textarea {
 
 :root[data-theme='dark'] .team-card .title {
     color: rgba(229, 237, 246, 0.72);
+}
+
+/* ===== Values Sektion ===== */
+.values-section,
+.team-section,
+.contact-section {
+    padding: 4.5rem 0;
+}
+
+.values-section {
+    background: var(--hero-bg);
+    border-top: 0;
+    color: var(--hero-text);
+}
+
+.values-section .section-title {
+    color: var(--hero-text);
+}
+
+.service-grid,
+.services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.promise-card,
+.service-box,
+.contact-form {
+    border: 1px solid var(--surface-border);
+    border-radius: 0.5rem;
+    background: var(--surface-bg);
+    color: var(--text-color);
+}
+
+.promise-card,
+.contact-form {
+    padding: 1.5rem;
+}
+
+.service-box {
+    text-align: center;
+}
+
+.promise-card img {
+    max-height: 56px;
+    margin: 0 auto 1.25rem;
+}
+
+.promise-card h3,
+.team-card .name {
+    margin: 0 0 0.5rem;
+}
+
+.promise-card h3 {
+    font-size: 1.05rem;
+}
+
+.promise-card p {
+    margin: 0 0 1.1rem;
+}
+
+.promise-card a,
+.contact-text a {
+    color: var(--link-color);
 }
 
 /* ===== Contact ===== */

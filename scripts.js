@@ -1,4 +1,4 @@
-// texte fuer das menu
+// texte fuer das dropdown
 var themeLabels = {
     light: 'Light mode',
     dark: 'Dark mode',
@@ -20,31 +20,31 @@ var missionImages = {
 };
 
 // variablen fuer wichtige elemente definieren
-var switcher = document.getElementById('theme-switcher'); // holt den theme switcher
-var menuButton = document.getElementById('theme-menu-button'); // holt den button fuer das menu
-var menu = document.getElementById('theme-menu'); // holt das menu mit den theme optionen
-var heroImage = document.querySelector('.hero-image'); // holt das hero bild
-var missionImage = document.querySelector('.mission-image'); // holt das mission bild
+var switcher = document.getElementById('theme-switcher'); //
+var menuButton = document.getElementById('theme-menu-button'); 
+var menu = document.getElementById('theme-menu');
+var heroImage = document.querySelector('.hero-image'); 
+var missionImage = document.querySelector('.mission-image');
 var themeSelectValue = document.getElementById('theme-select-value'); // holt den text fuer das aktuelle theme
 var menuItems = document.querySelectorAll('[data-theme-option]'); // holt alle theme buttons
 
 
 // aendert die seite basierend auf dem gewählten theme
-function applyTheme(themeName) { // stellt die seite auf das gewaehlte theme um
+function applyTheme(themeName) {
     document.documentElement.setAttribute('data-theme', themeName); // setzt das theme am html tag
 
-    if (themeName === 'dark') { // prueft ob dark aktiv ist
-        heroImage.src = heroImages.dark; // setzt das dark hero bild
-        missionImage.src = missionImages.dark; // setzt das dark mission bild
-        themeSelectValue.textContent = themeLabels.dark; // setzt den dark text im menu
-    } else if (themeName === 'sexy') { // prueft ob sexy aktiv ist
-        heroImage.src = heroImages.sexy; // setzt das sexy hero bild
-        missionImage.src = missionImages.sexy; // setzt das sexy mission bild
-        themeSelectValue.textContent = themeLabels.sexy; // setzt den sexy text im menu
+    if (themeName === 'dark') {
+        heroImage.src = heroImages.dark; 
+        missionImage.src = missionImages.dark; 
+        themeSelectValue.textContent = themeLabels.dark; // setzt den dark text im menue
+    } else if (themeName === 'sexy') {
+        heroImage.src = heroImages.sexy;
+        missionImage.src = missionImages.sexy;
+        themeSelectValue.textContent = themeLabels.sexy; // setzt den sexy text im menue
     } else {
-        heroImage.src = heroImages.light; // setzt das light hero bild
-        missionImage.src = missionImages.light; // setzt das light mission bild
-        themeSelectValue.textContent = themeLabels.light; // setzt den light text im menu
+        heroImage.src = heroImages.light; 
+        missionImage.src = missionImages.light; 
+        themeSelectValue.textContent = themeLabels.light; // setzt den light text im menue
     }
 
     for (var i = 0; i < menuItems.length; i++) { // geht durch alle theme buttons
@@ -56,26 +56,26 @@ function applyTheme(themeName) { // stellt die seite auf das gewaehlte theme um
     }
 
     switcher.classList.remove('is-open'); // macht den offenen zustand weg
-    menu.hidden = true; // versteckt das menu
+    menu.hidden = true; // versteckt das menue
 }
 
-// beim start ist light aktiv
-applyTheme(document.documentElement.getAttribute('data-theme') || 'light'); // setzt beim start das theme
+
+applyTheme(document.documentElement.getAttribute('data-theme') || 'light'); // setzt beim start das light theme
 
 // button klappt das menu auf und zu
 menuButton.addEventListener('click', function () { // reagiert auf klick auf den button
-    if (menu.hidden) { // prueft ob das menu versteckt ist
+    if (menu.hidden) { 
         menu.hidden = false; // zeigt das menu an
-        switcher.classList.add('is-open'); // setzt den offenen zustand
+        switcher.classList.add('is-open'); // setzt den offenen zustand fuer das menue
     } else {
-        menu.hidden = true; // versteckt das menu wieder
-        switcher.classList.remove('is-open'); // entfernt den offenen zustand
+        menu.hidden = true; // versteckt das menue wieder
+        switcher.classList.remove('is-open'); // entfernt den offenen zustand fuer das menue
     }
 });
 
 // klick auf ein item wechselt das theme
 for (var i = 0; i < menuItems.length; i++) { // geht durch alle theme buttons
-    menuItems[i].addEventListener('click', function () { // reagiert auf klick auf ein menu item
+    menuItems[i].addEventListener('click', function () { // reagiert auf klick auf einen theme button
         applyTheme(this.dataset.themeOption); // setzt das theme vom geklickten button
     });
 }
